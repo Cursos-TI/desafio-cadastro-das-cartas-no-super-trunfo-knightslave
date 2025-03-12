@@ -16,7 +16,6 @@ int main() {
     int turisticos;
     float densidade;
     float percapita;
-    float inversodensidade;
     float superpoder;
   
     printf("Estado: \n");
@@ -42,8 +41,7 @@ int main() {
     
     densidade = (float)(populacao / area);
     percapita = (float)(PIB / populacao);
-    inversodensidade = (area / populacao);
-    superpoder = (float)(populacao + area + PIB + turisticos + percapita + inversodensidade);
+    superpoder = (float) populacao + area + PIB + turisticos + percapita + (1.0 / densidade);
 
     printf(" *** Carta 1 *** \n");
     printf("Estado: %s \nCódigo: %s\n", estado, codigo);
@@ -65,7 +63,6 @@ int main() {
     int turisticos_2;
     float densidade_2;
     float percapita_2;
-    float inversodensidade_2;
     float superpoder_2;
 
 
@@ -92,8 +89,7 @@ int main() {
   
     densidade_2 = (float)(populacao_2 / area_2);
     percapita_2 = (float)(PIB_2 / populacao_2);
-    inversodensidade_2 = (float)(area_2 / populacao_2);
-    superpoder_2 = (float)(populacao_2 + area_2 + turisticos_2 + percapita_2 + inversodensidade_2);
+    superpoder_2 = (float)(populacao_2 + area_2 + turisticos_2 + percapita_2 + 1.0 / densidade_2);
 
     printf(" *** Carta 2 *** \n");
     printf("Estado: %s \nCódigo: %s\n", estado_2, codigo_2);
@@ -102,8 +98,19 @@ int main() {
     printf("PIB: %f \nNúmero de pontos turísticos: %d \n", PIB_2, turisticos_2);
     printf("Densidade Populacional: %.2f \n", densidade_2);
     printf("PIB per capita:%.2f \n", percapita_2);
-    printf("Super Poder: %.2f", superpoder_2);
+    printf("Super Poder: %.2f \n", superpoder_2);
     
+    printf("*** Comparação das cartas***\n");
+
+    printf("Populacao: %s venceu\n", populacao > populacao_2 ? nome : nome_2);
+    printf("Area: %s venceu\n", area > area_2 ? nome : nome_2);
+    printf("PIB: %s venceu\n", PIB > PIB_2 ? nome : nome_2);
+    printf("Pontos Turisticos: %s venceu\n", turisticos > turisticos_2 ? nome : nome_2);
+    printf("Densidade Populacional: %s venceu (menor valor)\n", densidade < densidade_2 ? nome : nome_2);
+    printf("PIB per Capita: %s venceu\n", percapita > percapita_2 ? nome : nome_2);
+    printf("Super Poder: %s venceu\n", superpoder  > superpoder_2 ? nome : nome_2);
+
+
     return 0;
 
 }
