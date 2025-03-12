@@ -6,7 +6,7 @@
 // Siga os comentários para implementar cada parte do desafio.
 
 int main() {
-    
+
     char estado [20];
     char codigo [20];
     char nome [20];
@@ -18,19 +18,18 @@ int main() {
     float percapita;
     float inversodensidade;
     float superpoder;
-
-
+  
     printf("Estado: \n");
-    scanf("%s", &estado);
+    scanf("%s", estado);
 
     printf("Código: \n");
-    scanf("%s", &codigo);
+    scanf("%s", codigo);
 
     printf("Nome da cidade: \n");
-    scanf("%s", &nome);
+    scanf("%s", nome);
 
     printf("População: \n");
-    scanf("%d", &populacao);
+    scanf("%lu", &populacao);
 
     printf("Área(km²): \n");
     scanf("%f", &area);
@@ -49,7 +48,7 @@ int main() {
     printf(" *** Carta 1 *** \n");
     printf("Estado: %s \nCódigo: %s\n", estado, codigo);
     printf("Nome da cidade: %s \n", nome);
-    printf("População: %d \nÁrea(km²): %f \n", populacao, area);
+    printf("População: %lu \nÁrea(km²): %f \n", populacao, area);
     printf("PIB: %f \nNúmero de pontos turísticos: %d \n", PIB, turisticos);
     printf("Densidade Populacional: %.2f \n", densidade);
     printf("PIB per capita:%.2f \n", percapita);
@@ -71,16 +70,16 @@ int main() {
 
 
     printf("Estado: \n");
-    scanf("%s", &estado_2);
+    scanf("%s", estado_2);
 
     printf("Código: \n");
-    scanf("%s", &codigo_2);
+    scanf("%s", codigo_2);
 
     printf("Nome da cidade: \n");
-    scanf("%s", &nome_2);
+    scanf("%s", nome_2);
 
     printf("População: \n");
-    scanf("%d", &populacao_2);
+    scanf("%lu", &populacao_2);
 
     printf("Área(km²): \n");
     scanf("%f", &area_2);
@@ -99,7 +98,7 @@ int main() {
     printf(" *** Carta 2 *** \n");
     printf("Estado: %s \nCódigo: %s\n", estado_2, codigo_2);
     printf("Nome da cidade: %s \n", nome_2);
-    printf("População: %d \nÁrea(km²): %f \n", populacao_2, area_2);
+    printf("População: %lu \nÁrea(km²): %f \n", populacao_2, area_2);
     printf("PIB: %f \nNúmero de pontos turísticos: %d \n", PIB_2, turisticos_2);
     printf("Densidade Populacional: %.2f \n", densidade_2);
     printf("PIB per capita:%.2f \n", percapita_2);
