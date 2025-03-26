@@ -1,10 +1,5 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-
 int main() {
 
     char estado [20];
@@ -17,7 +12,8 @@ int main() {
     float densidade;
     float percapita;
     float superpoder;
-  
+    int escolhadojogador;
+
     printf("Estado: \n");
     scanf("%s", estado);
 
@@ -102,11 +98,99 @@ int main() {
     
     printf("*** Comparação das cartas***\n");
 
-    if(PIB > PIB_2){
-        printf("carta 1 venceu!\n");
-    } else {
-        printf("carta 2 venceu!\n");
-    }
+    printf("Escolha o atributo para poder compararmos\n");
+
+    printf("1. Nome da cidade\n");
+    printf("2. populacao\n");
+    printf("3. Área\n");
+    printf("4. PIB\n");
+    printf("5. Número de pontos turísticos \n");
+    printf("6. Densidade demográfica \n");
+    scanf(" %d", &escolhadojogador);
+
+switch (escolhadojogador)
+{
+case 1:
+    printf(" %s %s",nome, nome_2);
+    break;
+
+case 2:
+
+if (populacao > populacao_2){
+    printf("carta 1 %lu vs %lu carta 2\n", populacao, populacao_2);
+    printf("A carta número 1 ganhou!\n");
+}else if (populacao < populacao_2){
+    printf("carta 1 %lu vs %lu carta 2\n", populacao, populacao_2);
+    printf("A carta numero 2 ganhou!\n");
+}else{
+    printf("carta 1 %lu vs %lu carta 2\n", populacao, populacao_2);
+    printf("Houve um empate\n");
+}
+break;
+
+case 3:
+if (area > area_2){
+    printf("carta 1 %f vs %f carta 2\n", area, area_2);
+    printf("A carta numero 1 ganhou!\n");
+}else if (area < area_2){
+    printf("carta 1 %f vs %f carta 2\n", area, area_2);
+    printf("A carta numero 2 ganhou!\n");
+}else{
+    printf("carta 1 %f vs %f carta 2\n", area, area_2);
+    printf("Houve um empate\n");
+}
+break;
+
+case 4:
+
+if(PIB > PIB_2){
+    printf("carta 1 %f vs. %f carta 2!\n", PIB, PIB_2);
+    printf("A carta numero 1 ganhou!\n");
+}else if (PIB < PIB_2){
+    printf("carta 1 %f vs %f carta 2\n", PIB, PIB_2);
+    printf("A carta numero 2 ganhou!\n");
+}else{
+    printf("carta 1 %f vs %f carta 2\n", PIB, PIB_2);
+    printf("Houve um empate\n");
+}
+break;
+
+case 5:
+
+if (turisticos > turisticos_2){
+    printf("carta 1 %d vs %d carta 2\n", turisticos, turisticos_2);
+    printf("A carta numero 1 ganhou!\n");
+}else if(turisticos < turisticos_2){
+    printf("carta 1 %d vs %d carta 2\n", turisticos, turisticos_2);
+    printf("A carta numero 2 ganhou!\n");
+}else{
+    printf("carta 1 %d vs %d carta 2\n", turisticos, turisticos_2);
+    printf("Houve um empate\n");
+}
+break;
+
+case 6:
+
+if (densidade < densidade_2){
+    printf("carta 1 %.2f vs %.2f carta 2\n", densidade, densidade_2);
+    printf("A carta numero 1 ganhou!\n");
+}else if(densidade > densidade_2){
+    printf("carta 1 %.2f vs %.2f carta 2\n", densidade, densidade_2);
+    printf("A carta numero 2 ganhou!\n");
+}else{
+    printf("carta 1 %.2f vs %.2f carta 2\n", densidade, densidade_2);
+    printf("Houve um empate\n");
+}
+break;
+
+default:
+    printf("Opcao invalida");
+    break;
+}
+
+
+
+printf("Fim de jogo!\n");
 
     return 0;
 
